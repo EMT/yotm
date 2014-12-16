@@ -1,0 +1,32 @@
+.info-title {
+	font-size: 0.875em;
+	width: 100%;
+	display: block;
+	border-bottom: 1px solid $blue;
+	padding-bottom: 0.5em;
+	margin-bottom: 3em;
+}
+
+.shop-info {
+	h2 {
+		font-size: 1.750em;
+		color: $blue;
+		line-height: 1.2;
+		margin-bottom: 1.4em;
+	}
+}
+
+.process-title, .shop-info p, .info-title {
+	color: $light-grey;
+	line-height: 1.2;
+}
+
+.shop-buy-button {
+	margin-top: 4em;
+	margin-bottom: 2.5em;
+	border: none;
+	padding: 1em;
+	background: $darker-grey;
+	color: $blue;
+	font-size: 1em;
+}
