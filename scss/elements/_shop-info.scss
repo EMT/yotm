@@ -12,7 +12,14 @@
 		font-size: 1.750em;
 		color: $blue;
 		line-height: 1.2;
-		margin-bottom: 1.4em;
+		margin-bottom: 1.8em;
+	}
+
+	h3 {
+		font-size: 1em;
+		color: $blue;
+		line-height: 1.2;
+		margin-bottom: 1.5em;
 	}
 }
 
@@ -25,8 +32,32 @@
 	margin-top: 4em;
 	margin-bottom: 2.5em;
 	border: none;
+	padding: 1em 0;
+	font-size: 1em;
+	background: none;
+}
+
+.buy-text {
 	padding: 1em;
 	background: $darker-grey;
 	color: $blue;
-	font-size: 1em;
+}
+
+.buy-price {
+	background: $blue;
+	padding: 1em;
+	color: rgb(255,255,255);
+}
+
+@media screen and ( max-width: 600px) {
+	.shop-info {
+		position: relative;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.shop-buy-button {
+		margin-bottom: 0;
+	}
 }

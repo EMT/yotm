@@ -1,6 +1,8 @@
 
+
 .yotm-wrapper {
 	position: absolute;
+	overflow: hidden;
 	left: 0;
 	width: 100%;
 	z-index: 200;
@@ -11,60 +13,74 @@
 	left: calc( -100% + 50px );
 	box-sizing: border-box;
 	padding: 8em 11.125em 8em 11.125em;
-	transition: left 0.75s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	transition: left $slide-speed cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-webkit-transition: left $slide-speed cubic-bezier(0.770, 0.000, 0.175, 1.000);
 	transition-delay: 0s;
+	-webkit-transition-delay: 0s;
 }
+
 
 .yotm-wrapper.open {
 	left: -50px;
-	transition-delay: 0.4s;
+	transition-delay: $slide-delay;
+	-webkit-transition-delay: $slide-delay;
 
 	.left-hand-reveal {
 		background: $darker-grey;
-		transition-delay: 1.20s;
+		transition-delay: $slide-delay;
+		-webkit-transition-delay: $slide-delay;
 		color: $blue;
 	}
 
-	.yotm-anchor svg {
+	.yotm-anchor .svg-wrapper {
 		transform: translateX(-50%) rotate(45deg);
-		transition-delay: 0.4s;
+		-webkit-transform: translateX(-50%) rotate(45deg);
+		transition-delay: $slide-delay;
+		-webkit-transition-delay: $slide-delay;
 	}
 
 	.yotm-anchor svg rect {
 		fill: $blue;
-		transition-delay: 1.20s;
+		transition-delay: $slide-delay;
+		-webkit-transition-delay: $slide-delay;
 	}
 
 }
 
 .yotm-anchor svg rect {
-	transition: fill 0.3s ease-in-out;
+	transition: fill $misc-speed ease-in-out;
+	-webkit-transition: fill $misc-speed ease-in-out;
 	transition-delay: 0;
+	-webkit-transition-delay: 0;
 }
 
-.yotm-anchor svg {
+.yotm-anchor .svg-wrapper {
 	width: 20px;
 	position: absolute;
 	top: 1em;
 	left: 50%;
+	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
-	transition: transform 0.75s ease-in-out;
+	transition: -webkit-transform $slide-speed ease-in-out;
+	transition: transform $slide-speed ease-in-out;
 	transition-delay: 0s;
 }
 
 
 .left-hand-reveal {
 	transition-delay: 0s;
-	transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+	transition: background $misc-speed ease-in-out, color $misc-speed ease-in-out;
 }
 
 
 .shop-info {
-	transition: transform 0.6s cubic-bezier(0.780, -0.200, 0.110, 1.200);
-	transition-delay: 0.75s;
+	transition: -webkit-transform $shop-speed cubic-bezier(0.780, -0.200, 0.110, 1.200);
+	transition: transform $shop-speed cubic-bezier(0.780, -0.200, 0.110, 1.200);
+	transition-delay: $shop-delay;
 }
 
 .shop-info.off-screen {
+	-webkit-transform: translateY(-900px);
 	transform: translateY(-900px);
 	transition-delay: 0s;
 }
@@ -74,6 +90,7 @@
 	font-family: Helvetica;
 	position: absolute;
 	transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
 	left: -37.5px;
 	text-decoration: none;
 	line-height: 1;
@@ -83,6 +100,7 @@
 .yotm-button-wrapper {
 	position: absolute;
 	top: 50%;
+	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
@@ -102,7 +120,15 @@
 	}
 }
 
+.yotm-wrapper.scrollable {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+}
 
+body.noscroll {
+	overflow: hidden;
+}
 
 .yotm-description {
 	color: $blue;
@@ -116,6 +142,11 @@
 		text-decoration: none;
 		border-bottom: 2px solid $blue;
 		line-height: 1;
+		transition: opacity $misc-speed ease-out;
+
+		 &:hover {
+		 	opacity: 0.7;
+		 }
 	}
 
 }
@@ -145,8 +176,83 @@
 		background: $light-grey;
 		right: -4em;
 		top: 50%;
+		-webkit-transform: translateY(-50%);
 		transform: translateY(-50%);
 	}
 }
 
+
+@media screen and (max-width: 1300px) {
+	.yotm-description {
+		font-size: 1.75em;
+		width: 70%;
+	}
+}
+
+
+@media screen and (max-width: 900px) {
+	.yotm-description {
+		width: 100%;
+		font-size: 1.5em;
+	}
+
+	.yotm-wrapper {
+		padding: 3em 5.125em 3em 5.125em;
+	}
+
+	.project-info {
+		margin-bottom: 4em;
+	}
+}
+
+
+@media screen and (max-width: 700px) {
+	.right-hand-buttons{
+		display: none;
+	}
+
+	.yotm-wrapper {
+		overflow: visible;
+		left: -100%;
+		padding: 2em 2.125em 2em 2.125em;
+		position: fixed;
+	}
+
+	.yotm-wrapper.open {
+		left: 0;
+	}
+
+	.yotm-button-wrapper {
+		display: none;
+	}
+
+	.yotm-anchor .svg-wrapper {
+		top: 0;
+		left: 50%;
+	}
+
+	.yotm-anchor svg rect {
+		transition-delay: $slide-delay;
+	}
+
+	.left-hand-reveal {
+		height: 50px;
+		right: -50px;
+		z-index: 200;
+		transition: right $misc-speed ease-in-out, background $misc-speed ease-in-out;
+		transition-delay: $slide-speed;
+	}
+
+
+	.yotm-wrapper.open .left-hand-reveal {
+		right: 0;
+		background: rgba(255,255,255,0);
+		transition-delay: 0s;
+	}
+
+	.shop-info.off-screen {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}
 

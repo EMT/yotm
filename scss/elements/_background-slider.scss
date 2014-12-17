@@ -4,12 +4,7 @@
 
 .main-wrapper {
 	overflow: hidden;
-	position: absolute;
-	margin: 0;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+
 }
 
 .background-images {
@@ -18,6 +13,20 @@
 	bottom: 0;
 	left: 0;
 	position: absolute;
+	height: 100%;
+}
+
+.slick-list {
+	height: 100%;
+}
+
+.slick-track {
+	height: 100%;
+}
+
+.slick-slide {
+	background-size: cover;
+	background-position: center;
 }
 
 
@@ -52,7 +61,8 @@
 }
 
 .buttons-text {
-	transform: translateY(-50%) rotate(90deg);
+	-webkit-transform: translateY(-50%) rotate(90deg);
+	        transform: translateY(-50%) rotate(90deg);
 	position: absolute;
 	top: 50%;
 	line-height: 50px;
@@ -73,4 +83,13 @@
 	position: absolute;
 	left: 5.125em;
 	top: 2em;
+}
+
+
+@media screen and ( max-width: 600px) {
+	.background-images {
+		position: relative;
+		height: 20em;
+	}
+
 }
