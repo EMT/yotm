@@ -57,7 +57,7 @@
 .yotm-anchor .svg-wrapper {
 	width: 20px;
 	position: absolute;
-	top: 1em;
+	top: 2em;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
@@ -172,7 +172,7 @@ body.noscroll {
 		display: block;
 		position: absolute;
 		width: 3em;
-		height: 2px;
+		height: 1px;
 		background: $light-grey;
 		right: -4em;
 		top: 50%;
@@ -187,6 +187,15 @@ body.noscroll {
 		font-size: 1.75em;
 		width: 70%;
 	}
+
+	.project-info {
+		margin-bottom: 4em;
+	}
+
+	.yotm-wrapper {
+		padding: 4em 7.125em 4em 7.125em;
+	}
+
 }
 
 
@@ -206,7 +215,7 @@ body.noscroll {
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px), screen and (max-width: 1024px) and (orientation: landscape) {
 	.right-hand-buttons{
 		display: none;
 	}

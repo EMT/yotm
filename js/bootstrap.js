@@ -24,28 +24,42 @@ $(document).ready(function(){
 		});
 	}
 
-var allColumns = '';
+	var shopOpen = true;
+	var shopHeight = $('.shop-info').outerHeight();
 
-allColumns = true;
+
+	$('.info-title').on('click', function(){
+
+			if (shopOpen) {
+				$('.shop-info').css('overflow','hidden');
+				$('.shop-info').stop().animate({height: "90px", easing: 'ease-in-out'}, 500);
+		        shopOpen = false;
+		    } else {
+				$('.shop-info').stop().animate({height: shopHeight, easing: 'ease-in-out'}, 500 , function() { $('.shop-info').css('overflow','visible') });
+		        shopOpen = true;
+		    }
+	});
 
 
+
+	var sideClosed = true;
 
 	$('.left-hand-reveal').on('click',function(){
 		$('.yotm-wrapper').toggleClass('open');
 		$('.shop-info').toggleClass('off-screen');
 		if ($(window).innerWidth() < 900 ) {
-		    if (allColumns) {
+		    if (sideClosed) {
 		        setTimeout(function(){
 					$('.yotm-wrapper').toggleClass('scrollable');
 					$('body').toggleClass('noscroll');
 				},740);
-		        allColumns = false;
+		        sideClosed = false;
 		    } else {
 		        setTimeout(function(){
 					$('.yotm-wrapper').toggleClass('scrollable');
 					$('body').toggleClass('noscroll');
 				},400);
-		        allColumns = true;
+		        sideClosed = true;
 		    }
 		}
 	});
