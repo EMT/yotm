@@ -8,6 +8,14 @@
 }
 
 .shop-info {
+	width: 390px;
+	background: rgba(255,255,255,0.95);
+	padding: 2em;
+	box-sizing: border-box;
+	position: absolute;
+	left: 5.125em;
+	top: 2em;
+	
 	h2 {
 		font-size: 1.750em;
 		color: $blue;
