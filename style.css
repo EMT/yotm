@@ -309,7 +309,7 @@ body.noscroll {
   .yotm-wrapper {
     overflow: visible;
     left: -100%;
-    padding: 2em 2.125em 2em 2.125em;
+    padding: 3em 2.125em 3em 2.125em;
     position: fixed; }
 
   .yotm-wrapper.open {
@@ -319,7 +319,7 @@ body.noscroll {
     display: none; }
 
   .yotm-anchor .svg-wrapper {
-    top: 0;
+    top: 15px;
     left: 50%; }
 
   .yotm-anchor svg rect {

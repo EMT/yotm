@@ -71,7 +71,7 @@ $(document).ready(function(){
 
 		var maxHeight = $('.shop-info').outerHeight() + 64;
 
-		if ($(window).innerHeight() < maxHeight ) {
+		if ($(window).innerHeight() < maxHeight && $(window).outerWidth() > 1024 ) {
 			$('.js-height').css('height',maxHeight);
 		} else {
 			$('.js-height').css('height','');
