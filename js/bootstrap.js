@@ -81,12 +81,49 @@ $(document).ready(function(){
 
 	$('button').on('click', function(){
 		$('.shop-info').addClass('off-screen');
-		setTimeout(function(){
-			$('.shop-info').hide();
-			$('.shop-success').css('display','block');
-			$('.shop-success').removeClass('off-screen');
-		}, 400)
+		// setTimeout(function(){
+		// 	$('.shop-info').hide();
+		// }, 400)
 	});
+
+	// Stripe Stuff
+
+	var handler = StripeCheckout.configure({
+	    key: 'pk_test_LlzKma4HdwMJUVRf3FC9YoU9',
+	    image: '/square-image.png',
+		token: function(token, args) {
+	      // Use the token to create the charge with a server-side script.
+	      // You can access the token ID with `token.id`
+	      console.log(token)
+	      // $('.shop-success').css('display','block');
+		  $('.shop-success').removeClass('off-screen');
+		  setTimeout(function(){
+		  	$('.item-info').addClass('off-screen');
+		  },300); // Such hacks, just a temp thing to demo the concept.
+	    }
+	  });
+
+	  $('.buy').on('click', function(e) {
+	    // Open Checkout with further options
+	    handler.open({
+	      name: 'Demo Site',
+	      description: '2 widgets ($20.00)',
+	      amount: 2000,
+	      closed: function(){
+		    // $('.item-info').css('display','block');
+			$('.item-info').removeClass('off-screen');
+	      }
+	    });
+	    e.preventDefault();
+	  });
+
+
+
+	  // Close Checkout on page navigation
+	  $(window).on('popstate', function() {
+	    handler.close();
+	  });
+
 
 });
 

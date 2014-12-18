@@ -15,7 +15,7 @@
 	position: absolute;
 	left: 5.125em;
 	top: 2em;
-	
+
 	h2 {
 		font-size: 1.750em;
 		color: $blue;
@@ -34,6 +34,11 @@
 .process-title, .shop-info p, .info-title {
 	color: $light-grey;
 	line-height: 1.3;
+	margin-bottom: 1em;
+}
+
+.shop-info p:last-of-type {
+	margin-bottom: 0;
 }
 
 .shop-buy-button {
@@ -44,6 +49,10 @@
 	font-size: 1em;
 	background: none;
 }
+
+// .shop-success {
+// 	display: none;
+// }
 
 .buy-text {
 	padding: 1em;
