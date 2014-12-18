@@ -90,14 +90,34 @@ $(document).ready(function(){
 
 	var handler = StripeCheckout.configure({
 	    key: 'pk_test_LlzKma4HdwMJUVRf3FC9YoU9',
-	    image: '/square-image.png',
+	    billingAddress: true,
+	    shippingAddress: true,
+	    amount: 1500,
+	    currency: 'gbp',
+	    name: 'Year of the Maker',
+	    description: '2015 calendar — £15',
+	    image: false,
 		token: function(token, args) {
 	      // Use the token to create the charge with a server-side script.
 	      // You can access the token ID with `token.id`
-	      console.log(token)
-	      // $('.shop-success').css('display','block');
-		  $('.shop-success').removeClass('off-screen');
-		  setTimeout(function(){
+	      console.log(token);
+	      $.ajax({
+	      	url: '/stripe.php',
+	      	type: 'POST',
+	      	dataType: 'json',
+	      	data: {
+	      		stripeToken: token.id,
+	      		amount: 1500
+	      	},
+	      	success: function() {
+	      		$('.shop-success').removeClass('off-screen');
+	      	},
+	      	error: function() {
+	      		$('.shop-error').removeClass('off-screen');
+	      	}
+	      });
+
+	      setTimeout(function(){
 		  	$('.item-info').addClass('off-screen');
 		  },300); // Such hacks, just a temp thing to demo the concept.
 	    }
@@ -106,11 +126,7 @@ $(document).ready(function(){
 	  $('.buy').on('click', function(e) {
 	    // Open Checkout with further options
 	    handler.open({
-	      name: 'Demo Site',
-	      description: '2 widgets ($20.00)',
-	      amount: 2000,
 	      closed: function(){
-		    // $('.item-info').css('display','block');
 			$('.item-info').removeClass('off-screen');
 	      }
 	    });
@@ -124,7 +140,17 @@ $(document).ready(function(){
 	    handler.close();
 	  });
 
+	  $('.js-reset-item-info').on('click', function(e) {
+	  	e.preventDefault();
+	  	resetItemInfo();
+	  });
 
 });
+
+
+var resetItemInfo = function() {
+	$('.shop-success, .shop-error').addClass('off-screen');
+	$('.item-info').removeClass('off-screen');
+}
 
 

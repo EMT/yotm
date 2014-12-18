@@ -202,6 +202,8 @@ body.noscroll {
   font-size: 2.125em;
   line-height: 1.4;
   width: 65%; }
+  .yotm-description p {
+    margin-bottom: 1em; }
   .yotm-description a {
     color: inherit;
     display: inline-block;
@@ -334,7 +336,8 @@ body.noscroll {
   border: none;
   padding: 1em 0;
   font-size: 1em;
-  background: none; }
+  background: none;
+  cursor: pointer; }
 
 .buy-text {
   padding: 1em;
