@@ -201,7 +201,7 @@ body.noscroll {
   color: #2727a4;
   font-size: 2.125em;
   line-height: 1.4;
-  width: 50%; }
+  width: 65%; }
   .yotm-description a {
     color: inherit;
     display: inline-block;
@@ -213,7 +213,7 @@ body.noscroll {
       opacity: 0.7; }
 
 .project-info {
-  margin-bottom: 8em; }
+  margin-bottom: 4em; }
 
 .project-info span {
   color: #a7a9ac;
