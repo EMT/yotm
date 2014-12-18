@@ -28,7 +28,9 @@ $(document).ready(function(){
 	var shopHeight = $('.shop-info').outerHeight();
 
 
-	$('.info-title').on('click', function(){
+	$('.info-title').on('click', function(e){
+
+			e.preventDefault();
 
 			if (shopOpen) {
 				$('.shop-info').css('overflow','hidden');
@@ -44,7 +46,8 @@ $(document).ready(function(){
 
 	var sideClosed = true;
 
-	$('.left-hand-reveal').on('click',function(){
+	$('.left-hand-reveal').on('click',function(e){
+		e.preventDefault();
 		$('.yotm-wrapper').toggleClass('open');
 		$('.shop-info').toggleClass('off-screen');
 		if ($(window).innerWidth() < 900 ) {
@@ -63,6 +66,18 @@ $(document).ready(function(){
 		    }
 		}
 	});
+
+	$(window).on("resize", function () {
+
+		var maxHeight = $('.shop-info').outerHeight() + 64;
+
+		if ($(window).innerHeight() < maxHeight ) {
+			$('.js-height').css('height',maxHeight);
+		} else {
+			$('.js-height').css('height','');
+		}
+
+	}).resize();
 
 });
 
