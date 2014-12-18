@@ -79,6 +79,15 @@ $(document).ready(function(){
 
 	}).resize();
 
+	$('button').on('click', function(){
+		$('.shop-info').addClass('off-screen');
+		setTimeout(function(){
+			$('.shop-info').hide();
+			$('.shop-success').css('display','block');
+			$('.shop-success').removeClass('off-screen');
+		}, 400)
+	});
+
 });
 
 
