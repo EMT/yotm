@@ -99,7 +99,7 @@ $(document).ready(function(){
 		  $('.shop-success').removeClass('off-screen');
 		  setTimeout(function(){
 		  	$('.item-info').addClass('off-screen');
-		  },300)
+		  },300); // Such hacks, just a temp thing to demo the concept.
 	    }
 	  });
 
