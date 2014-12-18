@@ -49,7 +49,7 @@ $(document).ready(function(){
 	$('.left-hand-reveal').on('click',function(e){
 		e.preventDefault();
 		$('.yotm-wrapper').toggleClass('open');
-		$('.shop-info').toggleClass('off-screen');
+		$('.item-info').toggleClass('off-screen');
 		if ($(window).innerWidth() < 900 ) {
 		    if (sideClosed) {
 		        setTimeout(function(){
