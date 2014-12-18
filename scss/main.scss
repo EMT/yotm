@@ -1,12 +1,11 @@
+// Core
 @import 'base/reset';
 @import 'variables';
-@import 'base/body';
-@import 'base/grid';
 @import 'base/typography';
-@import 'elements/footer';
-@import 'elements/header';
 @import 'elements/background-slider';
 @import 'elements/yotm-reveal';
 @import 'elements/shop-info';
+@import 'elements/right-hand-buttons';
 
+// Vendor
 @import 'vendor/slick';

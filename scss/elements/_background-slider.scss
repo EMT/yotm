@@ -1,10 +1,5 @@
-.background-images img {
-	width: 100%;
-}
-
 .main-wrapper {
 	overflow: hidden;
-
 }
 
 .background-images {
@@ -28,63 +23,6 @@
 	background-size: cover;
 	background-position: center;
 }
-
-
-
-
-.right-hand-buttons {
-	right: 0;
-}
-
-.right-hand-button {
-	height: 50%;
-	background: rgba(255,255,255,0.95);
-	display: block;
-	box-sizing: border-box;
-}
-
-.right-hand-button:nth-child(1) {
-	height: calc(50% - 1px);
-	margin-bottom: 1px;
-}
-
-.right-hand-buttons {
-	width: 50px;
-	position: absolute;
-	height: 100%;
-	top: 0;
-	bottom: 0;
-}
-
-.right-hand-buttons a {
-	position: relative;
-}
-
-.buttons-text {
-	-webkit-transform: translateY(-50%) rotate(90deg);
-	        transform: translateY(-50%) rotate(90deg);
-	position: absolute;
-	top: 50%;
-	line-height: 50px;
-	color: $blue;
-	left: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-}
-
-
-
-.shop-info {
-	width: 390px;
-	background: rgba(255,255,255,0.95);
-	padding: 2em;
-	box-sizing: border-box;
-	position: absolute;
-	left: 5.125em;
-	top: 2em;
-}
-
 
 @media screen and ( max-width: 600px), screen and (max-width: 1024px) and (orientation: landscape) {
 	.background-images {
