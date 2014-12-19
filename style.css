@@ -182,7 +182,6 @@ body {
 
 .yotm-button {
   color: inherit;
-  font-family: Helvetica;
   position: absolute;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
