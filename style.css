@@ -356,6 +356,11 @@ body.noscroll {
   color: #2727a4;
   text-decoration: none; }
 
+.shop-error h2, .shop-success h2 {
+  margin-bottom: 1.4em; }
+.shop-error p, .shop-success p {
+  margin-bottom: 2em; }
+
 @media screen and (max-width: 900px) {
   .shop-info {
     position: relative;
