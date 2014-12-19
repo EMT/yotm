@@ -27,8 +27,6 @@
 
 	.left-hand-reveal {
 		background: $blue;
-		transition-delay: $slide-delay;
-		-webkit-transition-delay: $slide-delay;
 		color: rgb(255,255,255);
 	}
 
@@ -66,8 +64,7 @@
 
 
 .left-hand-reveal {
-	transition-delay: 0s;
-	transition: background $misc-speed ease-in-out, color $misc-speed ease-in-out;
+	transition: background 0.3s ease-out;
 }
 
 
@@ -101,7 +98,7 @@
 	transform: translateY(-50%);
 }
 
-.left-hand-reveal {
+.yotm-wrapper .left-hand-reveal {
 	background: $blue;
 	color: white;
 	width: 50px;

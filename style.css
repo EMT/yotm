@@ -136,8 +136,6 @@ body {
   -webkit-transition-delay: 0.4s; }
   .yotm-wrapper.open .left-hand-reveal {
     background: #2727a4;
-    transition-delay: 0.4s;
-    -webkit-transition-delay: 0.4s;
     color: white; }
   .yotm-wrapper.open .yotm-anchor .svg-wrapper {
     transform: translateX(-50%) rotate(45deg);
@@ -165,8 +163,7 @@ body {
   transition-delay: 0s; }
 
 .left-hand-reveal {
-  transition-delay: 0s;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out; }
+  transition: background 0.3s ease-out; }
 
 .shop-info {
   transition: -webkit-transform 0.6s cubic-bezier(0.78, -0.2, 0.11, 1.2);
@@ -194,7 +191,7 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-.left-hand-reveal {
+.yotm-wrapper .left-hand-reveal {
   background: #2727a4;
   color: white;
   width: 50px;
@@ -203,7 +200,7 @@ body {
   top: 0;
   bottom: 0;
   right: 0; }
-  .left-hand-reveal:hover {
+  .yotm-wrapper .left-hand-reveal:hover {
     cursor: pointer;
     background: #2929ae; }
 
