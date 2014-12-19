@@ -216,7 +216,8 @@ body.noscroll {
   color: white;
   font-size: 2.125em;
   line-height: 1.4;
-  width: 65%; }
+  width: 65%;
+  max-width: 720px; }
   .yotm-description p {
     margin-bottom: 1em; }
   .yotm-description a {
@@ -280,7 +281,7 @@ body.noscroll {
   .yotm-anchor svg rect {
     transition-delay: 0.4s; }
 
-  .left-hand-reveal {
+  .yotm-wrapper .left-hand-reveal {
     height: 50px;
     right: -50px;
     z-index: 200;
@@ -289,7 +290,7 @@ body.noscroll {
 
   .yotm-wrapper.open .left-hand-reveal {
     right: 0;
-    background: rgba(255, 255, 255, 0);
+    background: #2727a4;
     transition-delay: 0s; }
 
   .shop-info.off-screen {

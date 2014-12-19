@@ -129,6 +129,7 @@ body.noscroll {
 	font-size: 2.125em;
 	line-height: 1.4;
 	width: 65%;
+	max-width: 720px;
 
 	p {
 		margin-bottom: 1em;
@@ -224,7 +225,7 @@ body.noscroll {
 		transition-delay: $slide-delay;
 	}
 
-	.left-hand-reveal {
+	.yotm-wrapper .left-hand-reveal {
 		height: 50px;
 		right: -50px;
 		z-index: 200;
@@ -235,7 +236,7 @@ body.noscroll {
 
 	.yotm-wrapper.open .left-hand-reveal {
 		right: 0;
-		background: rgba(255,255,255,0);
+		background: $blue;
 		transition-delay: 0s;
 	}
 
