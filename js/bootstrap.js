@@ -60,19 +60,14 @@ $(document).ready(function(){
 
 	$(window).on("resize", function () {
 
-		var maxHeight = $('.item-info').outerHeight() + 64;
-		var yotmHeight = $('.yotm-wrapper').outerHeight();
-
-		if ($(window).innerHeight() < maxHeight && $(window).outerWidth() > 1024 ) {
-			$('.js-height').css('height',maxHeight);
-		} else {
-			$('.js-height').css('height','');
-		}
+		var yotmHeight = $('.left-hand-content').outerHeight() + 168;
 
 		if ($(window).innerHeight() < yotmHeight && $(window).outerWidth() > 1024 ) {
-			$('.yotm-wrapper').css('height',maxHeight);
+			$('.yotm-wrapper').css('height',yotmHeight);
+			$('.js-height').css('height',yotmHeight);
 		} else {
 			$('.yotm-wrapper').css('height','');
+			$('.js-height').css('height','');
 		}
 
 	}).resize();
