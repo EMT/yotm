@@ -180,7 +180,7 @@ body {
   position: absolute;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
-  left: -37.5px;
+  left: -40px;
   text-decoration: none;
   line-height: 1;
   white-space: nowrap; }
@@ -333,7 +333,6 @@ body.noscroll {
 
 .shop-buy-button {
   margin-top: 4em;
-  margin-bottom: 2.5em;
   border: none;
   padding: 1em 0;
   font-size: 1em;
