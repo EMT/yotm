@@ -167,24 +167,6 @@ body.noscroll {
 	display: inline-block;
 }
 
-.project-info span:nth-child(1) {
-	margin-right: 5em;
-	position: relative;
-
-	&:after {
-		content: '';
-		display: block;
-		position: absolute;
-		width: 3em;
-		height: 1px;
-		background: $light-grey;
-		right: -4em;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		transform: translateY(-50%);
-	}
-}
-
 
 @media screen and (max-width: 1300px) {
 	.yotm-description {
@@ -219,7 +201,7 @@ body.noscroll {
 }
 
 
-@media screen and (max-width: 700px), screen and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (max-width: 900px) {
 	.right-hand-buttons{
 		display: none;
 	}

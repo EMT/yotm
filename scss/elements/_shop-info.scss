@@ -67,7 +67,12 @@
 	color: rgb(255,255,255);
 }
 
-@media screen and ( max-width: 600px), screen and (max-width: 1024px) and (orientation: landscape) {
+.back-to-home {
+	color: $blue;
+	text-decoration: none;
+}
+
+@media screen and ( max-width: 900px) {
 	.shop-info {
 		position: relative;
 		width: 100%;

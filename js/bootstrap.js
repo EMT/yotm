@@ -24,32 +24,23 @@ $(document).ready(function(){
 		});
 	}
 
-	var shopOpen = true;
-	var shopHeight = $('.shop-info').outerHeight();
-
-
-	$('.info-title').on('click', function(e){
-
-			e.preventDefault();
-
-			if (shopOpen) {
-				$('.shop-info').css('overflow','hidden');
-				$('.shop-info').stop().animate({height: "90px", easing: 'ease-in-out'}, 500);
-		        shopOpen = false;
-		    } else {
-				$('.shop-info').stop().animate({height: shopHeight, easing: 'ease-in-out'}, 500 , function() { $('.shop-info').css('overflow','visible') });
-		        shopOpen = true;
-		    }
-	});
-
-
 
 	var sideClosed = true;
 
 	$('.left-hand-reveal').on('click',function(e){
 		e.preventDefault();
 		$('.yotm-wrapper').toggleClass('open');
-		$('.item-info').toggleClass('off-screen');
+
+		if ($('.shop-success').hasClass('off-screen') && $('.shop-error').hasClass('off-screen')) {
+			$('.item-info').toggleClass('off-screen');
+		} else {
+			 if (!$('.shop-success').hasClass('off-screen')) {
+				$('.shop-success').toggleClass('off-screen');
+			 } else if (!$('.shop-error').hasClass('off-screen')) {
+				$('.shop-error').toggleClass('off-screen');
+			 }
+		}
+
 		if ($(window).innerWidth() < 900 ) {
 		    if (sideClosed) {
 		        setTimeout(function(){
@@ -69,7 +60,7 @@ $(document).ready(function(){
 
 	$(window).on("resize", function () {
 
-		var maxHeight = $('.shop-info').outerHeight() + 64;
+		var maxHeight = $('.item-info').outerHeight() + 64;
 
 		if ($(window).innerHeight() < maxHeight && $(window).outerWidth() > 1024 ) {
 			$('.js-height').css('height',maxHeight);
@@ -80,10 +71,7 @@ $(document).ready(function(){
 	}).resize();
 
 	$('button').on('click', function(){
-		$('.shop-info').addClass('off-screen');
-		// setTimeout(function(){
-		// 	$('.shop-info').hide();
-		// }, 400)
+		$('.item-info').addClass('off-screen');
 	});
 
 	// Stripe Stuff

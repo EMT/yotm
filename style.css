@@ -87,7 +87,7 @@ body {
   background-size: cover;
   background-position: center; }
 
-@media screen and (max-width: 600px), screen and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (max-width: 900px) {
   .background-images {
     position: relative;
     height: 20em; } }
@@ -222,21 +222,6 @@ body.noscroll {
   font-size: 1.125em;
   display: inline-block; }
 
-.project-info span:nth-child(1) {
-  margin-right: 5em;
-  position: relative; }
-  .project-info span:nth-child(1):after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 3em;
-    height: 1px;
-    background: #a7a9ac;
-    right: -4em;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); }
-
 @media screen and (max-width: 1300px) {
   .yotm-description {
     font-size: 1.75em;
@@ -257,7 +242,7 @@ body.noscroll {
 
   .project-info {
     margin-bottom: 4em; } }
-@media screen and (max-width: 700px), screen and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (max-width: 900px) {
   .right-hand-buttons {
     display: none; }
 
@@ -349,7 +334,11 @@ body.noscroll {
   padding: 1em;
   color: white; }
 
-@media screen and (max-width: 600px), screen and (max-width: 1024px) and (orientation: landscape) {
+.back-to-home {
+  color: #2727a4;
+  text-decoration: none; }
+
+@media screen and (max-width: 900px) {
   .shop-info {
     position: relative;
     width: 100%;
