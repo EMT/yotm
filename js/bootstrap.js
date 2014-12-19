@@ -149,7 +149,7 @@ var resetItemInfo = function() {
 	$('.item-info').removeClass('off-screen');
 
 	// Mobile
-	$('.shop-error').removeClass('overlay-shown');
+	$('.shop-error, .shop-success').removeClass('overlay-shown');
 	$('.black-overlay').removeClass('shown');
 
 }
