@@ -315,7 +315,8 @@ body.noscroll {
     font-size: 1.750em;
     color: #2727a4;
     line-height: 1.2;
-    margin-bottom: 1.8em; }
+    margin-bottom: 1.8em;
+    margin-top: 1em; }
   .shop-info h3 {
     font-size: 1em;
     color: #2727a4;
@@ -337,7 +338,9 @@ body.noscroll {
   padding: 1em 0;
   font-size: 1em;
   background: none;
-  cursor: pointer; }
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.5px; }
 
 .buy-text {
   padding: 1em;
