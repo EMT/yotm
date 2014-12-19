@@ -24,6 +24,26 @@
 	background-position: center;
 }
 
+.black-overlay {
+	background: rgb(0,0,0);
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.black-overlay.shown {
+	visibility: visible;
+	opacity: 0.6;
+}
+
 @media screen and ( max-width: 900px){
 	.background-images {
 		position: relative;

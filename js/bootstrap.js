@@ -99,9 +99,17 @@ $(document).ready(function(){
 	      	},
 	      	success: function() {
 	      		$('.shop-success').removeClass('off-screen');
+	      		if ($(window).innerWidth() < 900 ) {
+	      			$('.shop-success').addClass('overlay-shown');
+	      			$('.black-overlay').addClass('shown');
+	      		};
 	      	},
 	      	error: function() {
 	      		$('.shop-error').removeClass('off-screen');
+	      		if ($(window).innerWidth() < 900 ) {
+	      			$('.shop-error').addClass('overlay-shown');
+	      			$('.black-overlay').addClass('shown');
+	      		};
 	      	}
 	      });
 
@@ -139,6 +147,9 @@ $(document).ready(function(){
 var resetItemInfo = function() {
 	$('.shop-success, .shop-error').addClass('off-screen');
 	$('.item-info').removeClass('off-screen');
+
+	// Mobile
+	$('.shop-error').removeClass('overlay-shown');
+	$('.black-overlay').removeClass('shown');
+
 }
-
-
