@@ -84,7 +84,7 @@ $(document).ready(function(){
 	// Stripe Stuff
 
 	var handler = StripeCheckout.configure({
-	    key: 'pk_test_LlzKma4HdwMJUVRf3FC9YoU9',
+	    key: 'pk_live_wiyLwwuB6NOabiqa3UsBqdp9',
 	    billingAddress: true,
 	    // shippingAddress: true,
 	    amount: 1500,
