@@ -79,7 +79,7 @@ $(document).ready(function(){
 	var handler = StripeCheckout.configure({
 	    key: 'pk_test_LlzKma4HdwMJUVRf3FC9YoU9',
 	    billingAddress: true,
-	    shippingAddress: true,
+	    // shippingAddress: true,
 	    amount: 1500,
 	    currency: 'gbp',
 	    name: 'Year of the Maker',
