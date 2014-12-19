@@ -118,7 +118,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 200;
-  background: rgba(255, 255, 255, 0.95);
+  background: #2727a4;
   height: 100%;
   bottom: 0;
   top: 0;
@@ -135,19 +135,17 @@ body {
   transition-delay: 0.4s;
   -webkit-transition-delay: 0.4s; }
   .yotm-wrapper.open .left-hand-reveal {
-    background: #e9ebeb;
+    background: #2727a4;
     transition-delay: 0.4s;
     -webkit-transition-delay: 0.4s;
-    color: #2727a4; }
+    color: white; }
   .yotm-wrapper.open .yotm-anchor .svg-wrapper {
     transform: translateX(-50%) rotate(45deg);
     -webkit-transform: translateX(-50%) rotate(45deg);
     transition-delay: 0.4s;
     -webkit-transition-delay: 0.4s; }
   .yotm-wrapper.open .yotm-anchor svg rect {
-    fill: #2727a4;
-    transition-delay: 0.4s;
-    -webkit-transition-delay: 0.4s; }
+    fill: white; }
 
 .yotm-anchor svg rect {
   transition: fill 0.3s ease-in-out;
@@ -218,7 +216,7 @@ body.noscroll {
   overflow: hidden; }
 
 .yotm-description {
-  color: #2727a4;
+  color: white;
   font-size: 2.125em;
   line-height: 1.4;
   width: 65%; }
@@ -228,7 +226,7 @@ body.noscroll {
     color: inherit;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 2px solid #2727a4;
+    border-bottom: 2px solid white;
     line-height: 1;
     transition: opacity 0.3s ease-out; }
     .yotm-description a:hover {
